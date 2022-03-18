@@ -1,12 +1,14 @@
+import { Routes, Route } from 'react-router-dom';
+
 import FolderPage from './containers/FolderPage';
 
 import './App.css';
 
 function App() {
   return (
-    <div className='App'>
-      <FolderPage />
-    </div>
+    <Routes>
+      <Route path='/folder/*' element={<FolderPage />} />
+    </Routes>
   );
 }
 

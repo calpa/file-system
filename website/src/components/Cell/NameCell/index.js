@@ -1,7 +1,9 @@
+import { Link } from 'react-router-dom';
+
 const NameCell = (props) => {
   const { item } = props;
   if (item.type === 'dir') {
-    return <a href={`/${item.name}`}>{item.name}</a>;
+    return <Link to={`/folder/${item.name}`}>{item.name}</Link>;
   }
   return item.name;
 };
